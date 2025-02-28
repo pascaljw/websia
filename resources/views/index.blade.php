@@ -68,13 +68,13 @@
           <ul>
             <li><a href="index.html" class="active">Beranda</a></li>
             <li><a href="{{ route('about') }}">Tentang</a></li>
-            <li><a href="services.html">Galeri</a></li>
-            {{-- <li><a href="portfolio.html">Portfolio</a></li> --}}
+            <!-- <li><a href="services.html">Galeri</a></li> -->
+            <li><a href="portfolio.html">Galeri</a></li>
             <li><a href="team.html">Dosen</a></li>
-            {{-- <li><a href="pricing.html">Pricing</a></li> --}}
-            {{-- <li><a href="blog.html">Blog</a></li> --}}
+            <!-- {{-- <li><a href="pricing.html">Pricing</a></li> --}} -->
+            <li><a href="blog.html">Berita</a></li> 
             <li><a href="contact.html">Kontak</a></li>
-            {{-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <!-- {{-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="#">Dropdown 1</a></li>
                 <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -90,7 +90,7 @@
                 <li><a href="#">Dropdown 3</a></li>
                 <li><a href="#">Dropdown 4</a></li>
               </ul>
-            </li> --}}
+            </li> --}} -->
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
