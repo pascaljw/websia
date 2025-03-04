@@ -5,17 +5,17 @@
                 Dashboard
             </div>
             <div class="nav-item d-flex align-items-center">
-                <div class="input-group search-area">
+                <!-- <div class="input-group search-area">
                     <input type="text" class="form-control" placeholder="">
                     <span class="input-group-text"><a href="javascript:void(0)"><i class="flaticon-381-search-2"></i></a></span>
-                </div>
-                <div class="plus-icon">
+                </div> -->
+                <!-- <div class="plus-icon">
                     <a href="javascript:void(0);"><i class="fas fa-plus"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
         <ul class="navbar-nav header-right">
-            <li class="nav-item dropdown notification_dropdown">
+            <!-- <li class="nav-item dropdown notification_dropdown">
                 <a class="nav-link bell-link " href="javascript:void(0);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.871" viewBox="0 0 24 22.871">
                   <g  data-name="Layer 2" transform="translate(-2 -2)">
@@ -26,8 +26,8 @@
                 </svg>
                     <span class="badge light text-white bg-primary rounded-circle">76</span>
                 </a>
-            </li>	
-            <li class="nav-item dropdown notification_dropdown">
+            </li>	 -->
+            <!-- <li class="nav-item dropdown notification_dropdown">
                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                       <g  data-name="Layer 2" transform="translate(-2 -2)">
@@ -109,10 +109,10 @@
                     </div>
                     <a class="all-notification" href="javascript:void(0);">See all notifications <i class="ti-arrow-end"></i></a>
                 </div>
-            </li>
+            </li> -->
             
             
-            <li class="nav-item dropdown notification_dropdown">
+            <!-- <li class="nav-item dropdown notification_dropdown">
                 <a class="nav-link " href="javascript:void(0);" data-bs-toggle="dropdown">
                      <svg xmlns="http://www.w3.org/2000/svg" width="23.262" height="24" viewBox="0 0 23.262 24">
                       <g id="icon" transform="translate(-1565 90)">
@@ -176,7 +176,7 @@
                     </ul>
                 </div>
                 </div>
-            </li>
+            </li> -->
             <li class="nav-item dropdown header-profile">
                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                     <img src="{{asset('admin/images/profile/pic1.jpg')}}" width="20" alt=""/>

@@ -28,7 +28,7 @@
             </a>
         </div>
     </div>
-    <ul class="metismenu" id="menu">
+    <!-- <ul class="metismenu" id="menu">
         <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-025-dashboard"></i>
                 <span class="nav-text">Dashboard</span>
@@ -182,11 +182,11 @@
                 <li><a href="./empty-page.html">Empty Page</a></li>
             </ul>
         </li>
-    </ul>
-    <div class="plus-box">
+    </ul> -->
+    <!-- <div class="plus-box">
         <p class="fs-14 font-w600 mb-2">Let Jobick Managed<br>Your Resume Easily<br></p>
         <p>Lorem ipsum dolor sit amet</p>
-    </div>
+    </div> -->
     <div class="copyright">
         <p><strong>Jobick Job Admin</strong> © 2021 All Rights Reserved</p>
         <p class="fs-12">Made with <span class="heart"></span> by DexignLabs</p>

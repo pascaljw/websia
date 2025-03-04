@@ -1,6 +1,6 @@
 @extends('layout.admin.index')
 @section('content')
-<div class="col-xl-6">
+<!-- <div class="col-xl-6">
     <div class="row">
         <div class="col-xl-12">
             <div class="card">
@@ -334,8 +334,8 @@
             </div>
         </div>
     </div>
-</div>
-<div class="col-xl-6">
+</div> -->
+<!-- <div class="col-xl-6">
     <div class="row">
         <div class="col-xl-12">
             <div class="card">
@@ -694,5 +694,7 @@
             
         </div>
     </div>
-</div>
+</div> -->
+
+
 @endsection
