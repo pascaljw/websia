@@ -28,23 +28,23 @@
             </a>
         </div>
     </div>
-    <!-- <ul class="metismenu" id="menu">
+    <ul class="metismenu" id="menu">
         <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-025-dashboard"></i>
                 <span class="nav-text">Dashboard</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="index.html">Dashboard Light</a></li>
-                <li><a href="index-2.html">Dashboard Dark</a></li>
-                <li><a href="jobs-page.html">Jobs</a></li>
-                <li><a href="application-page.html">Application</a></li>
-                <li><a href="my-profile.html">Profile</a></li>
+                <li><a href="index.html">Slider Foto</a></li>
+                <li><a href="index-2.html">Form Sambutan</a></li>
+                <li><a href="my-profile.html">Foto Gedung</a></li>
+                <li><a href="jobs-page.html">Data Galeri</a></li>
+                <li><a href="application-page.html">Data Dosen</a></li>
                 <li><a href="statistics-page.html">Statistics</a></li>
                 <li><a href="compaines.html">Companies</a></li>	
             </ul>
 
         </li>
-        <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+        <!-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-093-waving"></i>
                 <span class="nav-text">Jobs</span>
             </a>
@@ -56,7 +56,7 @@
                 <li><a href="new-job.html">New Job</a></li>
                 <li><a href="user-profile.html">User Profile</a></li>
             </ul>
-        </li>
+        </li> -->
         <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
             <i class="flaticon-050-info"></i>
                 <span class="nav-text">Apps</span>
@@ -182,7 +182,7 @@
                 <li><a href="./empty-page.html">Empty Page</a></li>
             </ul>
         </li>
-    </ul> -->
+    </ul>
     <!-- <div class="plus-box">
         <p class="fs-14 font-w600 mb-2">Let Jobick Managed<br>Your Resume Easily<br></p>
         <p>Lorem ipsum dolor sit amet</p>

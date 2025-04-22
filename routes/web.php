@@ -13,9 +13,9 @@ use App\Http\Controllers\ContactController;
 // Route::get('/', function () {
 //     return view('index');
 // });
+Route::get('dashboard', [AdminController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('dashboard', [AdminController::class, 'index']);
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('portfolio');
 Route::get('/team', [TeamController::class, 'index'])->name('team');
