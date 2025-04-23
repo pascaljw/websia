@@ -34,7 +34,7 @@
                 <span class="nav-text">Dashboard</span>
             </a>
             <ul aria-expanded="false">
-                <li><a href="index.html">Slider Foto</a></li>
+                <li><a href="{{ route('admin.slider.index') }}">Slider Foto</a></li>
                 <li><a href="index-2.html">Form Sambutan</a></li>
                 <li><a href="my-profile.html">Foto Gedung</a></li>
                 <li><a href="jobs-page.html">Data Galeri</a></li>

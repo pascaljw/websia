@@ -8,12 +8,19 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SliderController;
 
 
 // Route::get('/', function () {
 //     return view('index');
 // });
 Route::get('dashboard', [AdminController::class, 'index']);
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('slider', SliderController::class);
+});
+
+
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [AboutController::class, 'index'])->name('about');

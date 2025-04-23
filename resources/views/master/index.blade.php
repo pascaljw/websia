@@ -3,35 +3,22 @@
 <!-- Hero Section -->
 <section id="hero" class="hero section">
 
-    <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
-    <div class="carousel-item active">
-        <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
-        <div class="carousel-container">
-        <h2><span>Sistem Informasi Akuntansi</span></h2>
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <a href="about.html" class="btn-get-started">Get Started</a> -->
+<div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-inner">
+        @foreach ($slides as $index => $slider)
+        <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+            <img src="{{ asset('storage/' . $slider->image) }}" alt="{{ $slider->title }}" class="d-block w-100">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>{{ $slider->title }}</h5>
+            </div>
         </div>
-    </div><!-- End Carousel Item -->
+        @endforeach
+    </div>
 
-    <div class="carousel-item">
-        <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
-        <div class="carousel-container">
-        <h2><span>Sistem Informasi Akuntansi</span></h2>
-        <!-- <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
-        <a href="about.html" class="btn-get-started">Get Started</a> -->
-        </div>
-    </div><!-- End Carousel Item -->
 
-    <div class="carousel-item">
-        <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
-        <div class="carousel-container">
-        <h2><span>Sistem Informasi Akuntansi</span></h2>
-        <!-- <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
-        <a href="about.html" class="btn-get-started">Get Started</a> -->
-        </div>
-    </div><!-- End Carousel Item -->
 
+
+    
     <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
     </a>
@@ -83,22 +70,23 @@
 
     <div class="row gy-4">
         <div class="col-lg-6 order-1 order-lg-2">
-        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+        <img src="assets/img/direktur_politani.png" class="img-fluid" alt="">
         </div>
         <div class="col-lg-6 order-2 order-lg-1 content">
-        <h3>Voluptatem dignissimos provident</h3>
+        <h3>Sambutan Direktor Politeknik Pertanian Negeri Samarinda</h3>
         <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+        “Politeknik Pertanian Negeri Samarinda (Politani) berdiri sejak 06 Februari 1989. 
+        Pada mulanya bernama Politeknik Pertanian Universitas Mulawarman. Berdasarkan SK. 
+        Menpan No. B-703/I/1995 tanggal 30 Juni 1995, 
+        maka secara resmi telah mandiri menjadi lembaga pendidikan vokasi di Kalimantan Timur.”
         </p>
         <ul>
-            <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-            <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-            <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+            <li><span>Hamka, S.TP.,M.Sc., MP</span></li>
+            <!-- <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
+            <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li> -->
         </ul>
         <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+        Direktur
         </p>
         </div>
     </div>

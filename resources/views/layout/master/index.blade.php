@@ -37,6 +37,7 @@
 </head>
 
 <body class="index-page">
+  
 
   <header id="header" class="header sticky-top">
     @include('layout.master.navbar')
