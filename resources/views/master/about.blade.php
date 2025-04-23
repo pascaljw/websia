@@ -5,11 +5,11 @@
     <div class="container">
       <nav class="breadcrumbs">
         <ol>
-          <li><a href="{{ route('home') }}" >Home</a></li>
-          <li class="current">About</li>
+          <li><a href="{{ route('home') }}" >Beranda</a></li>
+          <li class="current">Tentang kami</li>
         </ol>
       </nav>
-      <h1>About</h1>
+      <h1>Tentang Kami</h1>
     </div>
   </div><!-- End Page Title -->
 
