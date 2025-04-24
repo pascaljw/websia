@@ -37,8 +37,8 @@
                 <li><a href="{{ route('admin.slider.index') }}">Slider Foto</a></li>
                 <li><a href="index-2.html">Form Sambutan</a></li>
                 <li><a href="my-profile.html">Foto Gedung</a></li>
-                <li><a href="jobs-page.html">Data Galeri</a></li>
-                <li><a href="{{ route('admin.dosen.index') }}">Data Dosen</a></li>
+                <li><a href="jobs-page.html">Daftar Galeri</a></li>
+                <li><a href="{{ route('admin.dosen.index') }}">Daftar Dosen</a></li>
                 <li><a href="statistics-page.html">Statistics</a></li>
                 <li><a href="compaines.html">Companies</a></li>	
             </ul>
