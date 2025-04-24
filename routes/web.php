@@ -9,6 +9,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\DosenController;
 
 
 // Route::get('/', function () {
@@ -18,7 +19,9 @@ Route::get('dashboard', [AdminController::class, 'index']);
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('slider', SliderController::class);
 });
-
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('dosen', DosenController::class);
+});
 
 
 
