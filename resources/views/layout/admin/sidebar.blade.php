@@ -37,7 +37,7 @@
                 <li><a href="{{ route('admin.slider.index') }}">Slider Foto</a></li>
                 <li><a href="index-2.html">Form Sambutan</a></li>
                 <li><a href="my-profile.html">Foto Gedung</a></li>
-                <li><a href="jobs-page.html">Daftar Galeri</a></li>
+                <li><a href="{{ route('admin.galeri.index') }}">Daftar Galeri</a></li>
                 <li><a href="{{ route('admin.dosen.index') }}">Daftar Dosen</a></li>
                 <li><a href="{{ route('admin.tentang_kami.index') }}">Tentang kami</a></li>
                 <li><a href="compaines.html">Companies</a></li>	

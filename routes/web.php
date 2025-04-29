@@ -11,6 +11,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\TentangKamiController;
+use App\Http\Controllers\GaleriController;
 
 
 // Route::get('/', function () {
@@ -25,6 +26,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('tentang_kami', TentangKamiController::class);
+});
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('galeri', GaleriController::class);
 });
 
 
