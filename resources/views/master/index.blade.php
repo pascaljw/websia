@@ -3,7 +3,7 @@
 <!-- Hero Section -->
 <section id="hero" class="hero section">
 
-    <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
         @foreach ($slides as $index => $slider)
         <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
             <img src="{{ asset('storage/' . $slider->image) }}" alt="{{ $slider->title }}" class="d-block w-100">

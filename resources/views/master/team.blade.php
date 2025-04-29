@@ -26,7 +26,7 @@
             <div class="member-info">
               <h4>{{ $dosen->nama }}</h4>
               <span>{{ $dosen->jabatan }}</span>
-              <p>Dosen di Politeknik Pertanian Negeri Samarinda</p>
+              <p>Politeknik Pertanian Negeri Samarinda</p>
               <div class="social">
                 <a href="#"><i class="bi bi-twitter-x"></i></a>
                 <a href="#"><i class="bi bi-facebook"></i></a>
