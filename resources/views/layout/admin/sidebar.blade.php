@@ -39,7 +39,7 @@
                 <li><a href="my-profile.html">Foto Gedung</a></li>
                 <li><a href="jobs-page.html">Daftar Galeri</a></li>
                 <li><a href="{{ route('admin.dosen.index') }}">Daftar Dosen</a></li>
-                <li><a href="statistics-page.html">Statistics</a></li>
+                <li><a href="{{ route('admin.tentang_kami.index') }}">Tentang kami</a></li>
                 <li><a href="compaines.html">Companies</a></li>	
             </ul>
 
