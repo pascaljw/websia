@@ -74,11 +74,11 @@
 @import url(./../vendor/perfect-scrollbar/css/perfect-scrollbar.css);
 @import url(./../vendor/metismenu/css/metisMenu.min.css);
 :root {
-  --primary: #F93A0B;
+  --primary: #006A71;
   --secondary: #145650;
-  --primary-hover: #cc2c05;
+  --primary-hover: #006A71;
   --primary-dark: #681703;
-  --rgba-primary-1: rgba(249, 58, 11, 0.1);
+  --rgba-primary-1: lch(55.45% 95.58 43.11 / 0.1);
   --rgba-primary-2: rgba(249, 58, 11, 0.2);
   --rgba-primary-3: rgba(249, 58, 11, 0.3);
   --rgba-primary-4: rgba(249, 58, 11, 0.4);

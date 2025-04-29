@@ -3,7 +3,7 @@
 
 <div class="container">
     <h1>Edit Slide</h1>
-    <form action="{{ route('admin.slider.update', $slide->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.slider.update', $slider->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">

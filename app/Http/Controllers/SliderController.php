@@ -71,14 +71,15 @@ class SliderController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
         ]);
 
-        if ($request->hasFile('image')) {
-            Storage::disk('public')->delete('$slider->image');
-        }
-
-        $imagePath = $request->file('image')->store('slider', 'public');
-        $slider->image = $imagePath;
-
         $slider->title = $request->title;
+
+        if ($request->hasFile('image')) {
+            Storage::disk('public')->delete($slider->image);
+            
+            $imagePath = $request->file('image')->store('slider', 'public');
+            $slider->image = $imagePath;
+        }
+            
         $slider->save();
 
         return redirect()->route('admin.slider.index')->with('Berhasil', 'Mengunggah Foto.');

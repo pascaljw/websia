@@ -7,14 +7,14 @@ section('title', 'Slides')
     <h1>Slides</h1>
     <a href="{{ route('admin.slider.create') }}" class="btn btn-primary">Create New Slide</a>
     <div class="row mt-4">
-        @foreach ($slider as $slider)
+        @foreach ($slider as $item)
         <div class="col-md-4 mb-4">
             <div class="card">
-                <img src="{{ asset('storage/' . $slider->image) }}" class="card-img-top" alt="{{ $slider->title }}">
+                <img src="{{ asset('storage/' . $item->image) }}" class="card-img-top" alt="{{ $item->title }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $slider->title }}</h5>
-                    <a href="{{ route('admin.slider.edit', $slider->id) }}" class="btn btn-warning">Edit</a>
-                    <form action="{{ route('admin.slider.destroy', $slider->id) }}" method="POST" style="display:inline;">
+                    <h5 class="card-title">{{ $item->title }}</h5>
+                    <a href="{{ route('admin.slider.edit', $item->id) }}" class="btn btn-warning">Edit</a>
+                    <form action="{{ route('admin.slider.destroy', $item->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
