@@ -10,6 +10,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,13 @@
             <tr>
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $mhs->nama }}</td>
+                <td>
+                    <form action="{{ route('admin.mahasiswa.destroy', $mhs->id) }}" method="POST" onsubmit="return confirm('Yakin ingin menghapus?');">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                    </form>
+                </td>
             </tr>
             @endforeach
         </tbody>
