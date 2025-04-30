@@ -12,6 +12,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\TentangKamiController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\MahasiswaController;
 
 
 // Route::get('/', function () {
@@ -29,6 +30,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('galeri', GaleriController::class);
+});
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('mahasiswa', MahasiswaController::class);
 });
 
 

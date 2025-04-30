@@ -40,7 +40,7 @@
                 <li><a href="{{ route('admin.galeri.index') }}">Daftar Galeri</a></li>
                 <li><a href="{{ route('admin.dosen.index') }}">Daftar Dosen</a></li>
                 <li><a href="{{ route('admin.tentang_kami.index') }}">Tentang kami</a></li>
-                <li><a href="compaines.html">Companies</a></li>	
+                <li><a href="{{ route('admin.mahasiswa.index')}}">Data Mahasiswa</a></li>	
             </ul>
 
         </li>
@@ -57,7 +57,7 @@
                 <li><a href="user-profile.html">User Profile</a></li>
             </ul>
         </li> -->
-        <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+        {{-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
             <i class="flaticon-050-info"></i>
                 <span class="nav-text">Apps</span>
             </a>
@@ -84,8 +84,8 @@
                     </ul>
                 </li>
             </ul>
-        </li>
-        <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+        </li> --}}
+        {{-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-041-graph"></i>
                 <span class="nav-text">Charts</span>
             </a>
@@ -152,8 +152,8 @@
                 <li><a href="form-pickers.html">Pickers</a></li>
                 <li><a href="form-validation.html">Form Validate</a></li>
             </ul>
-        </li>
-        <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+        </li> --}}
+        {{-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-043-menu"></i>
                 <span class="nav-text">Table</span>
             </a>
@@ -161,8 +161,8 @@
                 <li><a href="table-bootstrap-basic.html">Bootstrap</a></li>
                 <li><a href="table-datatable-basic.html">Datatable</a></li>
             </ul>
-        </li>
-        <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+        </li> --}}
+        {{-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
                 <i class="flaticon-022-copy"></i>
                 <span class="nav-text">Pages</span>
             </a>
@@ -181,7 +181,7 @@
                 <li><a href="./page-lock-screen.html">Lock Screen</a></li>
                 <li><a href="./empty-page.html">Empty Page</a></li>
             </ul>
-        </li>
+        </li> --}}
     </ul>
     <!-- <div class="plus-box">
         <p class="fs-14 font-w600 mb-2">Let Jobick Managed<br>Your Resume Easily<br></p>
