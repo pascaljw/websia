@@ -12,4 +12,5 @@ class GalleryController extends Controller
         $galeris = Galeri::all();
         return view("master.portfolio", compact('galeris'));
     }
+    
 }

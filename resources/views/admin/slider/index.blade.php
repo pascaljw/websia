@@ -1,6 +1,6 @@
 @extends('layout.admin.index')
 
-section('title', 'Slides')
+
 
 @section('content')
 <div class="container">

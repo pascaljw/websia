@@ -13,26 +13,21 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\TentangKamiController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\BeritaController;
 
 
 // Route::get('/', function () {
 //     return view('index');
 // });
 Route::get('dashboard', [AdminController::class, 'index']);
+
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('slider', SliderController::class);
-});
-Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('dosen', DosenController::class);
-});
-Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('tentang_kami', TentangKamiController::class);
-});
-Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('galeri', GaleriController::class);
-});
-Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('mahasiswa', MahasiswaController::class);
+    Route::resource('berita', BeritaController::class);
 });
 
 

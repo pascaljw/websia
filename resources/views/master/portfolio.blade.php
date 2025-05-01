@@ -32,7 +32,9 @@
             @foreach($galeris as $galeri)
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
                     <div class="portfolio-content h-100">
-                        <img src="{{ asset('storage/' . $galeri->gambar) }}" class="img-fluid" alt="{{ $galeri->judul }}">
+                        <div class="container" style="position: relative; height: 300px; ">
+                            <img src="{{ asset('storage/' . $galeri->gambar) }}" class="img-fluid" alt="{{ $galeri->judul }}">
+                        </div>
                         <div class="portfolio-info">
                             <h4>{{ $galeri->judul }}</h4>
                             <p>{{ $galeri->gambar }}</p>

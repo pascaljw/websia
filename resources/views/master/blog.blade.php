@@ -25,29 +25,32 @@
 
             <div class="row gy-4">
 
+              @foreach ($berita as $item)
+                  
               <div class="col-lg-12">
                 <article>
-
+                  
                   <div class="post-img">
-                    <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                    <img src="{{ asset('storage/'.$item->gambar)}}" alt="" class="img-fluid">
                   </div>
 
                   <h2 class="title">
-                    <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                    <a href="blog-details.html">{{$item->judul}}</a>
                   </h2>
 
                   <div class="meta-top">
                     <ul>
-                      <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
-                      <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
+                      {{-- <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li> --}}
+                      <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="{{ $item->created_at->format('Y-m-d') }}">
+                        {{ $item->created_at->format('M j, Y') }}
+                    </time></a></li>
+                      {{-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li> --}}
                     </ul>
                   </div>
 
                   <div class="content">
                     <p>
-                      Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                      Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                      {{$item->isi}}
                     </p>
 
                     <div class="read-more">
@@ -57,8 +60,9 @@
 
                 </article>
               </div><!-- End post list item -->
+              @endforeach
 
-              <div class="col-lg-12">
+              {{-- <div class="col-lg-12">
 
                 <article>
 
@@ -158,7 +162,7 @@
 
                 </article>
 
-              </div><!-- End post list item -->
+              </div><!-- End post list item --> --}}
 
             </div><!-- End blog posts list -->
 
@@ -188,7 +192,7 @@
 
       </div>
 
-      <div class="col-lg-4 sidebar">
+      {{-- <div class="col-lg-4 sidebar">
 
         <div class="widgets-container">
 
@@ -287,7 +291,7 @@
 
         </div>
 
-      </div>
+      </div> --}}
 
     </div>
   </div>

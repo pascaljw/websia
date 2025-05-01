@@ -1,4 +1,4 @@
-@extends('layout.admin.index') <!-- sesuaikan dengan layout admin kamu -->
+@extends('layout.admin.index') 
 
 @section('content')
 <div class="container">

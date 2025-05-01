@@ -49,7 +49,7 @@
       <div class="row gy-4 mt-1">
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2857.166724162577!2d117.1209844731069!3d-0.5360303352624535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df68080334dac99%3A0x5327a22a4028b267!2sPoliteknik%20Pertanian%20Negeri%20Samarinda!5e1!3m2!1sid!2sid!4v1745903918499!5m2!1sid!2sid" 
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <!-- End Google Maps -->
