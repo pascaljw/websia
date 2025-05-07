@@ -41,6 +41,8 @@
                 <li><a href="{{ route('admin.dosen.index') }}">Daftar Dosen</a></li>
                 <li><a href="{{ route('admin.tentang_kami.index') }}">Tentang kami</a></li>
                 <li><a href="{{ route('admin.mahasiswa.index')}}">Data Mahasiswa</a></li>	
+                <li><a href="{{ route('admin.contacts.index')}}">Data kontak</a></li>	
+                <li><a href="{{ route('admin.partner.index')}}">Data partner</a></li>	
             </ul>
 
         </li>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\TentangKamiController;
 use App\Models\TentangKami;
 use App\Models\Mahasiswa;
+use App\Models\Partner;
 
 class AboutController extends Controller
 {
@@ -13,6 +14,7 @@ class AboutController extends Controller
     {
         $tentangKami = TentangKami::latest()->first();
         $jumlahMahasiswa = Mahasiswa::count();
-        return view('master.about', compact('tentangKami', 'jumlahMahasiswa'));
+        $partner = Partner::all();
+        return view('master.about', compact('tentangKami', 'jumlahMahasiswa', 'partner'));
     }
 }

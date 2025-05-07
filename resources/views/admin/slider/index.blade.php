@@ -1,11 +1,9 @@
 @extends('layout.admin.index')
 
-
-
 @section('content')
 <div class="container">
     <h1>Slides</h1>
-    <a href="{{ route('admin.slider.create') }}" class="btn btn-primary">Create New Slide</a>
+    <a href="{{ route('admin.slider.create') }}" class="btn btn-success mb-3">Create New Slide</a>
     <div class="row mt-4">
         @foreach ($slider as $item)
         <div class="col-md-4 mb-4">

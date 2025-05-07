@@ -1,7 +1,7 @@
 @extends('layout.admin.index')
 
 @section('content')
-<a href="{{ route('admin.berita.create') }}" class="btn btn-primary mb-2">Tambah Berita</a>
+<a href="{{ route('admin.berita.create') }}" class="btn btn-success mb-3">Tambah Berita</a>
 <table class="table">
   <thead>
     <tr>

@@ -14,6 +14,8 @@ use App\Http\Controllers\TentangKamiController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\kontakController;
+use App\Http\Controllers\PartnerController;
 
 
 // Route::get('/', function () {
@@ -28,6 +30,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('galeri', GaleriController::class);
     Route::resource('mahasiswa', MahasiswaController::class);
     Route::resource('berita', BeritaController::class);
+    Route::resource('contacts', kontakController::class);
+    Route::resource('partner', PartnerController::class);
 });
 
 

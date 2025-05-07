@@ -50,7 +50,8 @@
 
                   <div class="content">
                     <p>
-                      {{$item->isi}}
+                      {{ \Illuminate\Support\Str::limit($item->isi, 100, '...') }}
+
                     </p>
 
                     <div class="read-more">

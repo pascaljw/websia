@@ -16,6 +16,7 @@
   <!-- Contact Section -->
   <section id="contact" class="contact section">
 
+    @foreach ($contacts as $item)  
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
       <div class="row gy-4">
@@ -24,7 +25,7 @@
           <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
             <i class="bi bi-geo-alt"></i>
             <h3>Address</h3>
-            <p>Jl.Samratulangi, Sungai Keledang, Kec. Samarinda Seberang, Kota Samarinda</p>
+            <p>{{$item->address}}</p>
           </div>
         </div><!-- End Info Item -->
 
@@ -32,7 +33,7 @@
           <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
             <i class="bi bi-telephone"></i>
             <h3>Call Us</h3>
-            <p>+1 5589 55488 55</p>
+            <p>{{$item->phone}}</p>
           </div>
         </div><!-- End Info Item -->
 
@@ -40,7 +41,7 @@
           <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
             <i class="bi bi-envelope"></i>
             <h3>Email Us</h3>
-            <p>info@example.com</p>
+            <p>{{$item->email}}</p>
           </div>
         </div><!-- End Info Item -->
 
@@ -54,7 +55,7 @@
       </div>
       <!-- End Google Maps -->
 
-        <div class="col-lg-6">
+        {{-- <div class="col-lg-6">
           <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
             <div class="row gy-4">
 
@@ -84,11 +85,11 @@
 
             </div>
           </form>
-        </div><!-- End Contact Form -->
+        </div><!-- End Contact Form --> --}}
 
       </div>
 
     </div>
-
+    @endforeach
   </section><!-- /Contact Section -->
 @endsection

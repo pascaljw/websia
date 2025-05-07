@@ -83,8 +83,8 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Clients</h2>
-      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas</p>
+      <h2>Partner</h2>
+      {{-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas</p> --}}
     </div><!-- End Section Title -->
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -123,15 +123,12 @@
             }
           }
         </script>
+        
         <div class="swiper-wrapper align-items-center">
-          <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-          <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          @foreach ($partner as $item )
+
+          <div class="swiper-slide"><img src="{{ asset('storage/' . $item->logo) }}" class="img-fluid" alt=""></div>
+          @endforeach
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -141,7 +138,7 @@
   </section><!-- /Clients Section -->
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials section">
+  {{-- <section id="testimonials" class="testimonials section">
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
@@ -253,5 +250,5 @@
 
     </div>
 
-  </section><!-- /Testimonials Section -->
+  </section><!-- /Testimonials Section --> --}}
   @endsection

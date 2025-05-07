@@ -3,7 +3,9 @@
 @section('content')
 <div class="container">
     <h1>Data Tentang Kami</h1>
-    <a href="{{ route('admin.tentang_kami.create') }}" class="btn btn-primary">Tambah Data</a>
+    @if ($tentangKamis->count() == 0)
+    <a href="{{ route('admin.tentang_kami.create') }}" class="btn btn-danger">Tambah Kontak</a>
+@endif
     <table class="table mt-3">
         <thead>
             <tr>

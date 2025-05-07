@@ -3,7 +3,7 @@
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Daftar Dosen</h1>
-        <a href="{{ route('admin.dosen.create') }}" class="btn btn-primary">Tambah Dosen</a>
+        <a href="{{ route('admin.dosen.create') }}" class="btn btn-success mb-3">Tambah Dosen</a>
     </div>
 
     @if(session('success'))

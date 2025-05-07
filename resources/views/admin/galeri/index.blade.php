@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
   <h1>Galeri</h1>
-  <a href="{{ route('admin.galeri.create') }}" class="btn btn-primary mb-3">Tambah Gambar</a>
+  <a href="{{ route('admin.galeri.create') }}" class="btn btn-success mb-3">Tambah Gambar</a>
   <div class="row">
     @foreach ($galeris as $item)
       <div class="col-lg-4 col-md-6 mb-4">
