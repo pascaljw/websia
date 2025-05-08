@@ -35,12 +35,11 @@
             </a>
             <ul aria-expanded="false">
                 <li><a href="{{ route('admin.slider.index') }}">Slider Foto</a></li>
-                <li><a href="index-2.html">Form Sambutan</a></li>
+                <li><a href="{{ route('admin.tentang_kami.index') }}">Tentang kami</a></li>
+                <li><a href="{{ route('admin.dosen.index') }}">Daftar Dosen</a></li>
+                <li><a href="{{ route('admin.mahasiswa.index')}}">Data Mahasiswa</a></li>	
                 <li><a href="{{ route('admin.berita.index') }}">Berita</a></li>
                 <li><a href="{{ route('admin.galeri.index') }}">Daftar Galeri</a></li>
-                <li><a href="{{ route('admin.dosen.index') }}">Daftar Dosen</a></li>
-                <li><a href="{{ route('admin.tentang_kami.index') }}">Tentang kami</a></li>
-                <li><a href="{{ route('admin.mahasiswa.index')}}">Data Mahasiswa</a></li>	
                 <li><a href="{{ route('admin.contacts.index')}}">Data kontak</a></li>	
                 <li><a href="{{ route('admin.partner.index')}}">Data partner</a></li>	
             </ul>

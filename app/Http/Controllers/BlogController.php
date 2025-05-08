@@ -12,4 +12,10 @@ class BlogController extends Controller
         $berita = Berita::all();
         return view("master.blog", compact('berita'));
     }
+
+    public function show($id)
+    {
+        $berita = Berita::findOrFail($id);
+        return view('master.blog-details', compact('berita'));
+    }
 }

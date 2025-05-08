@@ -55,7 +55,7 @@
                     </p>
 
                     <div class="read-more">
-                      <a href="blog-details.html">Read More</a>
+                      <a href="{{ route('blog.show', $item->id)}}">Read More</a>
                     </div>
                   </div>
 

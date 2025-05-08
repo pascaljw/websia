@@ -15,6 +15,11 @@
         <textarea name="isi" class="form-control" rows="5">{{ old('isi', $berita->isi ?? '') }}</textarea>
     </div>
 
+    <div class="mb-3">
+        <label for="foto" class="form-label">Foto</label>
+        <input type="file" class="form-control" id="foto" name="foto" required>
+    </div>
+
     <button class="btn btn-success">{{ isset($berita) ? 'Update' : 'Simpan' }}</button>
 </form>
 @endsection

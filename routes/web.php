@@ -41,6 +41,7 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/gallery', [GalleryController::class, 'index'])->name('portfolio');
 Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog/details/{id}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 

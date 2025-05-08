@@ -37,7 +37,7 @@
                         </div>
                         <div class="portfolio-info">
                             <h4>{{ $galeri->judul }}</h4>
-                            <p>{{ $galeri->gambar }}</p>
+                            
                             <a href="{{ asset('storage/' . $galeri->gambar) }}" title="{{ $galeri->judul }}" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
                                 <i class="bi bi-zoom-in"></i>
                             {{-- </a>
