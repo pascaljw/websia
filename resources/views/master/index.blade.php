@@ -27,38 +27,27 @@
 
     </div> 
 
-    <div class="featured container">
-
-        <div class="row gy-4">
-
-            <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="featured-item position-relative">
-                    <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-                    <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-                </div>
-            </div><!-- End Featured Item -->
-
-            <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
-                <div class="featured-item position-relative">
-                    <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-                    <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-                </div>
-            </div><!-- End Featured Item -->
-
-            <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="300">
-                <div class="featured-item position-relative">
-                    <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-                    <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-                </div>
-            </div><!-- End Featured Item -->
-
+    <div class="container my-5">
+        <h4 class="text-center mb-4 fw-bold">Berita Terbaru</h4>
+        <div class="d-flex justify-content-center overflow-auto gap-3 pb-3" style="scroll-snap-type: x mandatory;">
+            @foreach($beritas as $berita)
+                <a href="{{ route('blog.show', $berita->id) }}" 
+                   class="flex-shrink-0 text-decoration-none text-dark" 
+                   style="width: 250px; scroll-snap-align: start;">
+                    <div class="card border-0 shadow-sm h-100">
+                        <img src="{{ asset('storage/' . $berita->gambar) }}" 
+                             class="position-relative card-img-top" 
+                             alt="{{ $berita->judul }}" 
+                             style="height: 160px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="card-body text-center">
+                            <h6 class="card-title text-truncate">{{ $berita->judul }}</h6>
+                            <div class="btn btn-success rounded-pill px-4 mt-2">Lihat</div>
+                        </div>
+                    </div>
+                </a>
+            @endforeach
         </div>
-
     </div>
-
 </section><!-- /Hero Section -->
 
 <!-- About Section -->
@@ -94,94 +83,35 @@
 </section><!-- /About Section -->
 
 <!-- Services Section -->
-<section id="services" class="services section">
+<section id="portfolio" class="portfolio section">
 
     <div class="container">
 
-        <div class="row gy-4">
+          <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-item  position-relative">
-                    <div class="icon">
-                        <i class="bi bi-activity"></i>
+        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+        <li data-filter="*" class="filter-active">Galeri terbaru</li>
+        </ul><!-- End Portfolio Filters -->
+
+        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            @foreach($galeris as $galeri)
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                    <div class="portfolio-content h-100">
+                        <div class="container" style="position: relative; height: 300px; ">
+                            <img src="{{ asset('storage/' . $galeri->gambar) }}" class="img-fluid" alt="{{ $galeri->judul }}">
+                        </div>
+                        <div class="portfolio-info">
+                            <h4>{{ $galeri->judul }}</h4>
+                            
+                            <a href="{{ asset('storage/' . $galeri->gambar) }}" title="{{ $galeri->judul }}" data-gallery="portfolio-gallery-product" class="glightbox preview-link">
+                                <i class="bi bi-zoom-in"></i>
+                        </div>
                     </div>
-                    <a href="#" class="stretched-link">
-                        <h3>Nesciunt Mete</h3>
-                    </a>
-                    <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure
-                        perferendis tempore et consequatur.</p>
                 </div>
-            </div><!-- End Service Item -->
+            @endforeach
+        </div><!-- End Portfolio Container -->
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-broadcast"></i>
-                    </div>
-                    <a href="#" class="stretched-link">
-                        <h3>Eosle Commodi</h3>
-                    </a>
-                    <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non
-                        ut nesciunt dolorem.</p>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-easel"></i>
-                    </div>
-                    <a href="#" class="stretched-link">
-                        <h3>Ledo Markt</h3>
-                    </a>
-                    <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas
-                        adipisci eos earum corrupti.</p>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-bounding-box-circles"></i>
-                    </div>
-                    <a href="#" class="stretched-link">
-                        <h3>Asperiores Commodit</h3>
-                    </a>
-                    <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit
-                        provident adipisci neque.</p>
-                    <a href="#" class="stretched-link"></a>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-calendar4-week"></i>
-                    </div>
-                    <a href="#" class="stretched-link">
-                        <h3>Velit Doloremque</h3>
-                    </a>
-                    <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at
-                        autem alias eius labore.</p>
-                    <a href="#" class="stretched-link"></a>
-                </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="service-item position-relative">
-                    <div class="icon">
-                        <i class="bi bi-chat-square-text"></i>
-                    </div>
-                    <a href="#" class="stretched-link">
-                        <h3>Dolori Architecto</h3>
-                    </a>
-                    <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti
-                        recusandae ducimus enim.</p>
-                    <a href="#" class="stretched-link"></a>
-                </div>
-            </div><!-- End Service Item -->
-
-        </div>
+    </div>
 
     </div>
 

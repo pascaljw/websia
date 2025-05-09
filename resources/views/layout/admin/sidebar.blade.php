@@ -42,6 +42,7 @@
                 <li><a href="{{ route('admin.galeri.index') }}">Daftar Galeri</a></li>
                 <li><a href="{{ route('admin.contacts.index')}}">Data kontak</a></li>	
                 <li><a href="{{ route('admin.partner.index')}}">Data partner</a></li>	
+                <li><a href="{{ route('admin.medsos.index')}}">Link Medsos</a></li>	
             </ul>
 
         </li>

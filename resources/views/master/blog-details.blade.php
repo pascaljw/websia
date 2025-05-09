@@ -32,7 +32,9 @@
 
               <div class="meta-top">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="{{ $berita->created_at->format('Y-m-d') }}">
+                    {{ $berita->created_at->format('M j, Y') }}
+                </time></a></li>
                 </ul>
               </div><!-- End meta top -->
 

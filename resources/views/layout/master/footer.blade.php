@@ -53,8 +53,19 @@
           <h4>Ikuti sosial media kami</h4>
           <p>Untuk mengetahui lebih banyak informasi</p>
           <div class="social-links d-flex">
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
+            @forelse ($medsos as $item)
+    <a href="{{ $item->facebook ?? '#' }}">
+        <i class="bi bi-facebook"></i>
+    </a>
+    <a href="{{ $item->instagram ?? '#' }}">
+        <i class="bi bi-instagram"></i>
+    </a>
+@empty
+    {{-- Tampilkan ikon default tanpa data --}}
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="#"><i class="bi bi-instagram"></i></a>
+@endforelse
+
           </div>
         </div>
 

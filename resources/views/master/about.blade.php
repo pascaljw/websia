@@ -68,7 +68,7 @@
           <div class="stats-item">
             <i class="bi bi-people"></i>
             <span data-purecounter-start="0" data-purecounter-end="{{ $jumlahMahasiswa }}" data-purecounter-duration="1" class="purecounter"></span>
-            <p><strong>Mahasiswa</strong> <span></span></p>
+            <p><strong>Mahasiswa Aktif</strong> <span></span></p>
           </div>
         </div><!-- End Stats Item -->
 

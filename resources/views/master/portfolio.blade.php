@@ -48,9 +48,6 @@
                     </div>
                 </div>
             @endforeach
-
-        {{-- <!-- End Portfolio Item --> --}}
-
         </div><!-- End Portfolio Container -->
 
     </div>
