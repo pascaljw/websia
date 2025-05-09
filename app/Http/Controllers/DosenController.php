@@ -13,7 +13,7 @@ class DosenController extends Controller
      */
     public function index()
     {
-        $dosens = Dosen::latest()->paginate(5);
+        $dosens = Dosen::all();
         return view('admin.dosen.index', compact('dosens'));
     }
 
