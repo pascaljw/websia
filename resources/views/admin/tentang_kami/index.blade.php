@@ -31,11 +31,7 @@
                 <td>{{ Str::limit($item->deskripsi, 100) }}</td>
                 <td>
                     <a href="{{ route('admin.tentang_kami.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                    <form action="{{ route('admin.tentang_kami.destroy', $item->id) }}" method="POST" style="display:inline;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" onclick="return confirm('Yakin ingin hapus?')" class="btn btn-danger btn-sm">Hapus</button>
-                    </form>
+                    
                 </td>
             </tr>
             @endforeach

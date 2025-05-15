@@ -13,6 +13,10 @@
         <label>Isi</label>
         <textarea name="isi" rows="5" class="form-control">{{ old('isi', $berita->isi ?? '') }}</textarea>
     </div>
+    <div class="mb-3">
+        <label>Kategori</label>
+        <textarea name="kategori" rows="5" class="form-control">{{ old('kategori', $berita->kategori ?? '') }}</textarea>
+    </div>
 
     <div class="mb-3">
         <label>Gambar</label>

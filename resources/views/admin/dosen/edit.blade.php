@@ -16,6 +16,18 @@
             <label for="jabatan" class="form-label">Jabatan</label>
             <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $dosen->jabatan }}" required>
         </div>
+        <div class="mb-3">
+            <label for="facebook" class="form-label">Facebook</label>
+            <input type="text" class="form-control" id="facebook" name="facebook" value="{{ $dosen->facebook }}">
+        </div>
+        <div class="mb-3">
+            <label for="instagram" class="form-label">Instagram</label>
+            <input type="text" class="form-control" id="instagram" name="instagram" value="{{ $dosen->instagram }}">
+        </div>
+        <div class="mb-3">
+            <label for="linkedin" class="form-label">Linked</label>
+            <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ $dosen->linkedin }}" >
+        </div>
 
         <div class="mb-3">
             <label for="foto" class="form-label">Foto</label>

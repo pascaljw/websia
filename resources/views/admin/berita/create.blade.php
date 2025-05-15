@@ -14,6 +14,10 @@
         <label>Isi</label>
         <textarea name="isi" class="form-control" rows="5">{{ old('isi', $berita->isi ?? '') }}</textarea>
     </div>
+     <div class="mb-3">
+        <label>Kategori</label>
+        <textarea name="kategori" class="form-control" rows="5">{{ old('kategori', $berita->kategori ?? '') }}</textarea>
+    </div>
 
     <div class="mb-3">
         <label for="foto" class="form-label">Foto</label>

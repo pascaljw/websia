@@ -23,6 +23,7 @@ class BeritaController extends Controller
     {
         $validated = $request->validate([
             'judul' => 'required',
+            'kategori' => 'required',
             'isi' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg|max:5120'
         ]);
@@ -50,6 +51,7 @@ class BeritaController extends Controller
     {
         $validated = $request->validate([
             'judul' => 'required',
+            'kategori' => 'required',
             'isi' => 'required',
             'gambar' => 'image|mimes:jpeg,png,jpg|max:5120'
         ]);

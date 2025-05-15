@@ -12,7 +12,7 @@
         </div>
         <div class="mb-3">
             <label>Instagram</label>
-            <input type="text" name="facebook" class="form-control" value="{{ $medsos->instagram }}" >
+            <input type="text" name="instagram" class="form-control" value="{{ $medsos->instagram }}" >
         </div>
         <button type="submit" class="btn btn-success">Simpan</button>
     </form>

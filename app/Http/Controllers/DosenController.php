@@ -33,6 +33,9 @@ class DosenController extends Controller
         $request->validate([
             'nama' => 'required|max:100',
             'jabatan' => 'required|max:100',
+            'facebook' => 'nullable',
+            'instagram' => 'nullable',
+            'linkedin' => 'nullable',
             'foto' => 'required|image|mimes:jpeg,png,jpg|max:5120',
         ]);
 
@@ -42,6 +45,9 @@ class DosenController extends Controller
             'nama' => $request->nama,
             'jabatan' => $request->jabatan,
             'foto' => $fotoPath,
+            'facebook' => $request->facebook,
+            'instagram' => $request->instagram,
+            'linkedin' => $request->linkedin,
         ]);
 
         return redirect()->route('admin.dosen.index')->with('sukses', 'Dosen Berhasil ditambahkan');
@@ -71,6 +77,9 @@ class DosenController extends Controller
         $request->validate([
             'nama' => 'required|max:100',
             'jabatan' => 'required|max:100',
+            'facebook' => 'nullable',
+            'instagram' => 'nullable',
+            'linkedin' => 'nullable',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
         ]);
 
@@ -84,6 +93,9 @@ class DosenController extends Controller
 
         $dosen->nama = $request->nama;
         $dosen->jabatan = $request->jabatan;
+        $dosen->facebook = $request->facebook;
+        $dosen->instagram = $request->instagram;
+        $dosen->linkedin = $request->linkedin;
         $dosen->save();
 
         return redirect()->route('admin.dosen.index')->with('sukses', 'data dosen berhasil diperbarui');

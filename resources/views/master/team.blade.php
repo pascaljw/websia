@@ -28,10 +28,9 @@
               <span>{{ $dosen->jabatan }}</span>
               <p>Politeknik Pertanian Negeri Samarinda</p>
               <div class="social">
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="{{ $dosen->facebook }}"><i class="bi bi-facebook"></i></a>
+                <a href="{{ $dosen->instagram }}"><i class="bi bi-instagram"></i></a>
+                <a href="{{ $dosen->linkedin }}"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
