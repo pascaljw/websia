@@ -29,11 +29,11 @@
 
     <div class="container my-5">
         <h4 class="text-center mb-4 fw-bold">Berita Terbaru</h4>
-        <div class="d-flex justify-content-center overflow-auto gap-3 pb-3" style="scroll-snap-type: x mandatory;">
+        <div class="d-flex flex-nowrap overflow-auto gap-3 pb-3 px-3" style="scroll-snap-type: x mandatory;">
             @foreach($beritas as $berita)
                 <a href="{{ route('blog.show', $berita->id) }}" 
                    class="flex-shrink-0 text-decoration-none text-dark" 
-                   style="width: 250px; scroll-snap-align: start;">
+                   style="min-width: 250px; scroll-snap-align: start;">
                     <div class="card border-0 shadow-sm h-100">
                         <img src="{{ asset('storage/' . $berita->gambar) }}" 
                              class="position-relative card-img-top" 

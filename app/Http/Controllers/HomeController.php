@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         $galeris = Galeri::latest()->take(3)->get();
-        $beritas = Berita::latest()->take(3)->get();
+        $beritas = Berita::latest()->take(5)->get();
         $slides = Slider::all();
         $medsos = MediaSocial::all();
         return view('master.index', compact('slides', 'beritas', 'galeris', 'medsos'));

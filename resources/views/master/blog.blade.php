@@ -173,23 +173,41 @@
 
         <!-- Blog Pagination Section -->
         <section id="blog-pagination" class="blog-pagination section">
-
           <div class="container">
             <div class="d-flex justify-content-center">
-              <ul>
-                <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#" class="active">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li>...</li>
-                <li><a href="#">10</a></li>
-                <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
-              </ul>
-            </div>
-          </div>
+              <ul class="pagination">
 
-        </section><!-- /Blog Pagination Section -->
+                {{-- Tombol sebelumnya --}}
+                @if ($berita->onFirstPage())
+                    <li class="page-item disabled"><span class="page-link"><i class="bi bi-chevron-left"></i></span></li>
+                @else
+                    <li class="page-item">
+                        <a class="page-link" href="{{ $berita->previousPageUrl() }}"><i class="bi bi-chevron-left"></i></a>
+                    </li>
+                @endif
+
+                {{-- Nomor halaman --}}
+                @for ($i = 1; $i <= $berita->lastPage(); $i++)
+                    <li class="page-item {{ $berita->currentPage() == $i ? 'active' : '' }}">
+                        <a class="page-link" href="{{ $berita->url($i) }}">{{ $i }}</a>
+                    </li>
+                @endfor
+
+                {{-- Tombol selanjutnya --}}
+                @if ($berita->hasMorePages())
+                    <li class="page-item">
+                        <a class="page-link" href="{{ $berita->nextPageUrl() }}"><i class="bi bi-chevron-right"></i></a>
+                    </li>
+                @else
+                    <li class="page-item disabled"><span class="page-link"><i class="bi bi-chevron-right"></i></span></li>
+                @endif
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+
 
       </div>
 

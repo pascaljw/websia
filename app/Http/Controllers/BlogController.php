@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $berita = Berita::all();
+        $berita = Berita::latest()->paginate(3);
         $medsos = MediaSocial::all();
         return view("master.blog", compact('berita', 'medsos'));
     }

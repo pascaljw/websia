@@ -55,5 +55,5 @@
         </tbody>
     </table>
 
-    {{ $dosens->links() }}
+
 @endsection

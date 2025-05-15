@@ -60,6 +60,29 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
+/* Pagination style agar seragam dengan tombol hijau di website */
+.page-item .page-link {
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    padding: 6px 0;
+    text-align: center;
+    color: #006A71; /* warna hijau Bootstrap */
+    border: 1px solid #006A71;
+}
+
+.page-item .page-link:hover {
+    background-color: #006A71;
+    color: #fff;
+}
+
+.page-item.active .page-link {
+    background-color: #006A71;
+    border-color: #006A71;
+    color: #fff;
+}
+
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
