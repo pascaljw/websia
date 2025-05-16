@@ -36,10 +36,15 @@ class DosenController extends Controller
             'facebook' => 'nullable',
             'instagram' => 'nullable',
             'linkedin' => 'nullable',
-            'foto' => 'required|image|mimes:jpeg,png,jpg|max:5120',
+            'foto' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
         ]);
 
-        $fotoPath = $request->file('foto')->store('dosen-foto', 'public');
+        if ($request->hasFile('foto')) {
+            $fotoPath = $request->file('foto')->store('uploads/dosen', 'public');
+        } else {
+            // Gunakan null untuk menandakan foto default
+            $fotoPath = null;
+        }
 
         Dosen::create([
             'nama' => $request->nama,
@@ -84,11 +89,13 @@ class DosenController extends Controller
         ]);
 
         if ($request->hasFile('foto')) {
-            Storage::disk('public')->delete($dosen->foto);
+            // Hapus foto lama jika bukan null (default)
+            if ($dosen->foto) {
+                Storage::disk('public')->delete($dosen->foto);
+            }
 
-            $fotoPath = $request->file('foto')->store('dosen-foto', 'public');
+            $fotoPath = $request->file('foto')->store('uploads/dosen', 'public');
             $dosen->foto = $fotoPath;
-
         }
 
         $dosen->nama = $request->nama;
@@ -98,7 +105,7 @@ class DosenController extends Controller
         $dosen->linkedin = $request->linkedin;
         $dosen->save();
 
-        return redirect()->route('admin.dosen.index')->with('sukses', 'data dosen berhasil diperbarui');
+        return redirect()->route('admin.dosen.index')->with('sukses', 'Data dosen berhasil diperbarui');
     }
 
     /**
@@ -106,7 +113,10 @@ class DosenController extends Controller
      */
     public function destroy(Dosen $dosen)
     {
-        Storage::disk('public')->delete($dosen->foto);
+        // Hapus foto jika bukan default (null)
+        if ($dosen->foto) {
+            Storage::disk('public')->delete($dosen->foto);
+        }
 
         $dosen->delete();
 

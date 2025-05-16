@@ -14,9 +14,9 @@
 
         <div>
             <label for="logo">Ganti Logo (jika perlu):</label>
-            <input type="file" name="logo">
+            <input type="file" name="logo" class="form-control" required>
         </div>
 
-        <button type="submit">Update</button>
+        <button type="submit" class="btn btn-primary">Update</button>
     </form>
 @endsection

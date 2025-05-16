@@ -30,7 +30,7 @@
 
         <div class="mb-3">
             <label for="foto" class="form-label">Foto</label>
-            <input type="file" class="form-control" id="foto" name="foto" required>
+            <input type="file" class="form-control" id="foto" name="foto" >
         </div>
 
         <button type="submit" class="btn btn-primary">Simpan</button>

@@ -6,9 +6,9 @@
         <a href="{{ route('admin.dosen.create') }}" class="btn btn-success mb-3">Tambah Dosen</a>
     </div>
 
-    @if(session('success'))
+    @if(session('sukses'))
         <div class="alert alert-success">
-            {{ session('success') }}
+            {{ session('sukses') }}
         </div>
     @endif
 
@@ -28,11 +28,10 @@
                         @if($dosen->foto)
                             <img src="{{ asset('storage/' . $dosen->foto) }}" alt="Foto Dosen" width="80" class="img-thumbnail">
                         @else
-                            <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
-                                No Photo
-                            </div>
+                            <img src="{{ asset('admin/images/default.png') }}" alt="Foto Default" width="80" class="img-thumbnail">
                         @endif
                     </td>
+
                     <td>{{ $dosen->nama }}</td>
                     <td>{{ $dosen->jabatan }}</td>
                     <td>
@@ -54,6 +53,4 @@
             @endforelse
         </tbody>
     </table>
-
-
 @endsection

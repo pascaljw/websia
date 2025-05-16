@@ -21,7 +21,11 @@
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
           <div class="team-member d-flex align-items-start">
             <div class="pic">
-              <img src="{{ asset('storage/' . $dosen->foto) }}" class="img-fluid" alt="{{ $dosen->nama }}">
+                        @if($dosen->foto)
+                            <img src="{{ asset('storage/' . $dosen->foto) }}" alt="{{ $dosen->nama }}" class="img-fluid">
+                        @else
+                            <img src="{{ asset('admin/images/default.png') }}" alt="{{ $dosen->nama }}" class="img-fluid">
+                        @endif
             </div>
             <div class="member-info">
               <h4>{{ $dosen->nama }}</h4>
