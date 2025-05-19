@@ -83,6 +83,8 @@ class GaleriController extends Controller
             $galeri->gambar = $path;
         }
 
+        $galeri->save();
+
         return redirect()->route('admin.galeri.index')->with('sukses', 'berhasil diupdate.');
     }
 
