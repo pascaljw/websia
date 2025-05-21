@@ -12,6 +12,7 @@
                 <li><a href="{{ route('blog') }}" class="{{ Request::routeIs('blog') || Request::routeIs('blog.*') ? 'active' : '' }}">Berita</a></li> 
                 <li><a href="{{ route('team') }}" class="{{ Request::routeIs('team') ? 'active' : '' }}">Dosen</a></li>
                 <li><a href="{{ route('portfolio') }}" class="{{ Request::routeIs('portfolio') ? 'active' : '' }}">Galeri</a></li>
+                <li><a href="{{ route('thesis') }}" class="{{ Request::routeIs('thesis') ? 'active' : '' }}">Data TA</a></li>
                 <li><a href="{{ route('contact') }}" class="{{ Request::routeIs('contact') ? 'active' : '' }}">Kontak</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

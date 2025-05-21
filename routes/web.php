@@ -17,6 +17,8 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\kontakController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\MediaSocialController;
+use App\Http\Controllers\ThesisController;
+use App\Http\Controllers\TugasAkhirController;
 
 // Route::get('/', function () {
 //     return view('index');
@@ -33,6 +35,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('contacts', kontakController::class);
     Route::resource('partner', PartnerController::class);
     Route::resource('medsos', MediaSocialController::class);
+    Route::resource('tugas_akhir', TugasAkhirController::class);
 });
 
 
@@ -44,6 +47,7 @@ Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/details/{id}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/thesis', [ThesisController::class, 'index'])->name('thesis');
 
 
 
