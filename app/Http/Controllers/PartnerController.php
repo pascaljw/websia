@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 
 class PartnerController extends Controller
@@ -84,6 +86,16 @@ class PartnerController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $partner = Partner::findOrFail($id);
+
+    // Hapus file gambar dari storage
+    if (Storage::disk('public')->exists($partner->logo)) {
+        Storage::disk('public')->delete($partner->logo);
+    }
+
+    // Hapus data partner dari database
+    $partner->delete();
+
+    return redirect()->route('admin.partner.index')->with('success', 'Partner berhasil dihapus.');
     }
 }
