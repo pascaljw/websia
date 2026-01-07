@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AboutController;
@@ -19,13 +19,18 @@ use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\MediaSocialController;
 use App\Http\Controllers\ThesisController;
 use App\Http\Controllers\TugasAkhirController;
+use App\Http\Controllers\UserController;
 
 // Route::get('/', function () {
 //     return view('index');
 // });
-Route::get('dashboard', [AdminController::class, 'index']);
+Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard')->middleware('admin');
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
+Route::post('login', [AuthController::class, 'login'])->middleware('guest');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
+
+Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
     Route::resource('slider', SliderController::class);
     Route::resource('dosen', DosenController::class);
     Route::resource('tentang_kami', TentangKamiController::class);
@@ -36,6 +41,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('partner', PartnerController::class);
     Route::resource('medsos', MediaSocialController::class);
     Route::resource('tugas_akhir', TugasAkhirController::class);
+    Route::middleware('superadmin')->resource('users', UserController::class);
+    Route::get('profile', [AdminController::class, 'profile'])->name('profile');
+    Route::post('profile', [AdminController::class, 'updateProfile'])->name('profile.update');
 });
 
 
@@ -48,6 +56,9 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/details/{id}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/thesis', [ThesisController::class, 'index'])->name('thesis');
+
+// Auth routes
+require __DIR__.'/auth.php';
 
 
 

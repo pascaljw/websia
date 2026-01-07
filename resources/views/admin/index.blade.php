@@ -52,4 +52,11 @@
         </div>
     </div>
 </div>
+@if(Auth::user()->isSuperAdmin())
+<div class="row mt-4">
+    <div class="col-xl-12">
+        <a href="{{ route('admin.users.index') }}" class="btn btn-primary">Manage Users</a>
+    </div>
+</div>
+@endif
 @endsection
