@@ -711,6 +711,12 @@
 					JobickCarousel();
 				}, 1000); 
 			});
+
+			// Check if mobile device
+			if (window.innerWidth < 768) {
+				alert('Halaman admin tidak didukung untuk perangkat mobile (HP), gunakan Laptop atau Komputer anda untuk mengakses halaman ini. Anda akan diarahkan ke halaman utama.');
+				window.location.href = '/';
+			}
 	</script>
 
 </body>
