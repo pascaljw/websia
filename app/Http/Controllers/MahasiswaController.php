@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Mahasiswa;
 
 class MahasiswaController extends Controller
@@ -70,6 +71,10 @@ class MahasiswaController extends Controller
      */
     public function destroy(string $id)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $mahasiswa = Mahasiswa::findOrFail($id);
         $mahasiswa->delete();
 

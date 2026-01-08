@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
@@ -71,6 +72,10 @@ class BeritaController extends Controller
 
     public function destroy(Berita $berita)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         if ($berita->gambar) {
             Storage::disk('public')->delete($berita->gambar);
         }

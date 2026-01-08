@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Galeri;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class GaleriController extends Controller
 {
@@ -93,6 +94,10 @@ class GaleriController extends Controller
      */
     public function destroy(string $id)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $galeri = Galeri::findorFail($id);
         $galeri->delete();
         return redirect()->route('admin.dosen.index')->with('sukses', 'galeri berhadil dihapus.');

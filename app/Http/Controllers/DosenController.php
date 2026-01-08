@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dosen;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class DosenController extends Controller
@@ -113,6 +114,10 @@ class DosenController extends Controller
      */
     public function destroy(Dosen $dosen)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         // Hapus foto jika bukan default (null)
         if ($dosen->foto) {
             Storage::disk('public')->delete($dosen->foto);

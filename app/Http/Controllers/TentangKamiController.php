@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TentangKami;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TentangKamiController extends Controller
 {
@@ -94,6 +95,10 @@ class TentangKamiController extends Controller
      */
     public function destroy(string $id)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $tentangKami = TentangKami::findOrFail($id);
 
         if($tentangKami->foto && file_exists(public_path('storage/'.$tentangKami->foto))){

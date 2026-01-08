@@ -3,7 +3,9 @@
 @section('content')
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1>Daftar Dosen</h1>
+        @if(Auth::user()->isSuperAdmin())
         <a href="{{ route('admin.dosen.create') }}" class="btn btn-success mb-3">Tambah Dosen</a>
+        @endif
     </div>
 
     @if(session('sukses'))
@@ -38,11 +40,13 @@
                         <div class="d-flex gap-2">
                             <a href="{{ route('admin.dosen.show', $dosen->id) }}" class="btn btn-info btn-sm">Lihat</a>
                             <a href="{{ route('admin.dosen.edit', $dosen->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                            @if(Auth::user()->isSuperAdmin())
                             <form action="{{ route('admin.dosen.destroy', $dosen->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">Hapus</button>
                             </form>
+                            @endif
                         </div>
                     </td>
                 </tr>

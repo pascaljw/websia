@@ -5,8 +5,8 @@
                 <img src="{{asset('admin/images/profile/pic1.jpg')}}" alt=""/>
                 <div class="d-flex align-items-center sidebar-info">
                     <div>
-                        <span class="font-w400 d-block">Franklin Jr</span>
-                        <small class="text-end font-w400">Superadmin</small>
+                        <span class="font-w400 d-block">{{ Auth::user()->name }}</span>
+                        <small class="text-end font-w400">{{ Auth::user()->isSuperAdmin() ? 'Superadmin' : 'Admin' }}</small>
                     </div>	
                     <i class="fas fa-chevron-down"></i>
                 </div>
@@ -18,10 +18,10 @@
                 <svg  xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 <span class="ms-2">Profile </span>
             </a>
-            <a href="./email-inbox.html" class="dropdown-item ai-icon">
+            {{-- <a href="./email-inbox.html" class="dropdown-item ai-icon">
                 <svg  xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 <span class="ms-2">Inbox </span>
-            </a>
+            </a> --}}
             <form method="POST" action="{{ route('logout') }}" class="d-inline">
                 @csrf
                 <button type="submit" class="dropdown-item ai-icon">
@@ -36,9 +36,14 @@
         </div>
     </div>
     <ul class="metismenu" id="menu">
-        <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+        <li><a href="{{ route('dashboard') }}" aria-expanded="false">
                 <i class="flaticon-025-dashboard"></i>
                 <span class="nav-text">Dashboard</span>
+            </a>
+        </li>
+        <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-025-dashboard"></i>
+                <span class="nav-text">Menu Lainnya</span>
             </a>
             <ul aria-expanded="false">
                 <li><a href="{{ route('admin.slider.index') }}">Slider Foto</a></li>

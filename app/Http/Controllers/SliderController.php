@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
@@ -90,6 +91,10 @@ class SliderController extends Controller
      */
     public function destroy(slider $slider)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         Storage::disk('public')->delete($slider->image);
         
         $slider->delete();

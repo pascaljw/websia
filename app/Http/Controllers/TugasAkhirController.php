@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\TugasAkhir;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TugasAkhirController extends Controller
 {
@@ -82,6 +83,10 @@ class TugasAkhirController extends Controller
      */
     public function destroy(TugasAkhir $tugasAkhir)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
        $tugasAkhir->delete();
 
         return redirect()->route('admin.tugas_akhir.index')->with('success', 'Data berhasil dihapus.'); 

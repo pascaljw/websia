@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -86,6 +87,10 @@ class PartnerController extends Controller
      */
     public function destroy(string $id)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $partner = Partner::findOrFail($id);
 
     // Hapus file gambar dari storage

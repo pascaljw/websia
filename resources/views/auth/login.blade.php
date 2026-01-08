@@ -23,6 +23,16 @@
 
 	<!-- Style css -->
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+    <style>
+        .btn-primary {
+            background-color: #006970 !important;
+            border-color: #006970 !important;
+        }
+        .btn-primary:hover {
+            background-color: #005a5a !important;
+            border-color: #005a5a !important;
+        }
+    </style>
 
 </head>
 <body class="vh-100">
@@ -61,17 +71,17 @@
                                             <div class="form-group">
                                                <div class="custom-control custom-checkbox ml-1">
 													<input type="checkbox" class="custom-control-input" id="basic_checkbox_1">
-													<label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
+													<label class="custom-control-label" for="basic_checkbox_1">Ingat Saya</label>
 												</div>
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign Me In</button>
+                                            <button type="submit" class="btn btn-primary btn-block">Login</button>
                                         </div>
                                     </form>
-                                    <div class="new-account mt-3">
+                                    {{-- <div class="new-account mt-3">
                                         <p>Don't have an account? <a class="text-primary" href="#">Sign up</a></p>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

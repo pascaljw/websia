@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class kontakController extends Controller
 {
@@ -77,6 +78,10 @@ class kontakController extends Controller
      */
     public function destroy(Contact $contact)
     {
+        if (!Auth::user()->isSuperAdmin()) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $contact->delete();
         return redirect()->route('admin.contacts.index')->with('success', 'Contact deleted successfully.');
     }
