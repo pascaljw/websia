@@ -4,7 +4,7 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title text-center">Dashboard SISTEM INFORMASI AKUNTANSI D3</h4>
+                <h4 class="card-title text-center">Dashboard Sistem Informasi Akuntansi D3</h4>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -56,6 +56,7 @@
 <div class="row mt-4">
     <div class="col-xl-12">
         <a href="{{ route('admin.users.index') }}" class="btn btn-primary">Manage Users</a>
+        <a href="{{ route('admin.permissions.index') }}" class="btn btn-secondary">Manage Permissions</a>
     </div>
 </div>
 @endif

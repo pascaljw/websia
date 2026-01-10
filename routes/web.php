@@ -20,6 +20,7 @@ use App\Http\Controllers\MediaSocialController;
 use App\Http\Controllers\ThesisController;
 use App\Http\Controllers\TugasAkhirController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PermissionController;
 
 // Route::get('/', function () {
 //     return view('index');
@@ -42,6 +43,10 @@ Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
     Route::resource('medsos', MediaSocialController::class);
     Route::resource('tugas_akhir', TugasAkhirController::class);
     Route::middleware('superadmin')->resource('users', UserController::class);
+    Route::middleware('superadmin')->group(function () {
+        Route::get('permissions', [PermissionController::class, 'index'])->name('permissions.index');
+        Route::post('permissions/assign', [PermissionController::class, 'assign'])->name('permissions.assign');
+    });
     Route::get('profile', [AdminController::class, 'profile'])->name('profile');
     Route::post('profile', [AdminController::class, 'updateProfile'])->name('profile.update');
 });
